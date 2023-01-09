@@ -10,35 +10,36 @@
  * @return {boolean}
  */
 var isValid = function(s) {
-    var list1 =  [];
-    var list2 = [];
-    var list3 = [];
-    for(var i = 0;i<s.length();i++){//increment later
-    if(s.charAt(i) == '(')
-        list1.push(s.charAt(i));
-    else if(s.charAt(i) == ')'){
-        if(list1==null)
+    let list1 =  []
+    let list2 = []
+    let list3 = []
+    for(var i = 0;i<s.lengt;i++){//increment later
+    if(s[i] === '(')
+        list1.push(s[i]);
+    else if(s[i] === ')'){
+        if(list1===null)
             exit(0);
         list1.pop();
     }
-    if(s.charAt(i) == '[')
-        list2.push(s.charAt(i));
-    else if(s.charAt(i) == ']'){
-        if(list2==null)
+    if(s[i] === '[')
+        list2.push(s[i]);
+    else if(s[i] === ']'){
+        if(list2===null)
             exit(0);
         list2.pop();
     
     }
-    if(s.charAt(i) == '{')
-        list1.push(s.charAt(i));
-    else if(s.charAt(i) == '}'){
-        if(list1==null)
+    if(s[i] === '{')
+        list1.push(s[i]);
+    else if(s[i] === '}'){
+        if(list1===null)
             exit(0);
         list1.pop();
     }
 }
-   if(list1==null && list2 == null && list3 == null)
-        return(1); 
+   if(list1===null && list2 === null && list3 === null)
+        return true; 
+        //
 };
 // @lc code=end
 

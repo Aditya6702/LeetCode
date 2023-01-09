@@ -13,7 +13,7 @@ var isValid = function(s) {
     var list1 =  [];
     var list2 = [];
     var list3 = [];
-    for(var i =0;i<s.length;i++){//increment later
+    for(var i = 0;i<s.length();i++){//increment later
     if(s.charAt(i) == '(')
         list1.push(s.charAt(i));
     else if(s.charAt(i) == ')'){

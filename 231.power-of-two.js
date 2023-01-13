@@ -10,13 +10,11 @@
  * @return {boolean}
  */
 var isPowerOfTwo = function(n) {
-    if(n == 1)
-        return 1;
-    else{
-        n = n/2;
-        isPowerOfTwo(n);
+    let i=1;
+    while(i < n){
+        i *= 2;
     }
-    return 0;
+    return i==n;
 };
 // @lc code=end
 

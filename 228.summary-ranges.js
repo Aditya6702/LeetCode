@@ -10,19 +10,25 @@
  * @return {string[]}
  */
 var summaryRanges = function(nums) {
-    let arr=[];
- for(let i=0;i<nums.length;i++){
-    var start=nums[i];
-    while(i+1 < nums.length && nums[i] == nums[i=1])
-        i++;
-    if(nums[i] != start)
-            arr.push('${nums[start]}->${nums[i]}');
-    else    
-            arr.push('${nums[i]}');
-    
+    let list = [];
+    var start=0;
+for(let i=0;i<nums.length;i++){
+    if(nums[i] !== list[i] && nums[i] !== 0){
+        list.push(nums[start] + "->" + nums[i-1]);
+        start = i;
+        }
 
- }
- return arr;    
-};
+    else if(nums[i] + 1 !== nums[i++])
+        list.push(nums[i]);
+    if (nums[i] + 1 == nums[i++]){
+        ++i;        
+    }
+    
+        // continue;
+}
+
+return list;
+
+}
 // @lc code=end
 
